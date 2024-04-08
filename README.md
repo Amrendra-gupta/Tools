@@ -12,7 +12,7 @@ These scripts are designed to help simplify your workflow and save time.
 
 ## 1. Installation
 
-To install the necessary dependencies, clone this repository onto your local machine using SSH or HTTPS protocol, then navigate to its location in terminal or command prompt. Next, create a virtual environment (optional but recommended):
+To install the necessary dependencies, clone this repository onto your local machine using SSH or HTTPS protocol, then navigate to its location in terminal or command prompt.
 
 Now, install the requirements:
 ```bash
