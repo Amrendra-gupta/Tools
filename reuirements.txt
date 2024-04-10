@@ -1,0 +1,4 @@
+# Tools requirements
+# Usage: pip install -r requirements.txt
+
+Pillow>=9.5.0
