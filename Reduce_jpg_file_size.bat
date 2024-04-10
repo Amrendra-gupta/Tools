@@ -1,5 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
+
+title Reduce Image File Size
+
 echo Never put the output folder same as input folder, if you do then you will loose all the images.
 REM Prompt user to input input and output folders
 set /p input_folder="Enter the path to the input folder: "

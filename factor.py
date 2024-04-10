@@ -8,11 +8,6 @@ def find_factors(n):
             factors.append(i)
     return factors
 
-num = int(input('enter the number '))
-result = find_factors(num)
-print(result)
-
-
 while True:
     try:
         # Get the number from the user

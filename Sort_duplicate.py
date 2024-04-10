@@ -20,6 +20,14 @@ def find_duplicate_images(folder_path):
     
     return duplicate_images
 
+'''
+This code should be placed in working folder where you want to find duplicates.
+Or modify the folder_path variable as per usages.
+NOTE: This code may not always return true duplicates, so always review duplicates.
+But works good.
+'''
+
+print("Put the code in where you want to find duplicate images.\n")
 # Example usage
 folder_path = '.'
 duplicate_images = find_duplicate_images(folder_path)

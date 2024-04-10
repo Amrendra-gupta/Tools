@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Messages</title>
+    <style>
+    </style>
+</head>  
+<body>
+    <h3>Chat Message</h3>
+    <p>This tool is used to display extracted Whatsapp chat in simple conversation.<br>
+        After conversion you can copy it or you whatever you want.<br>
+        Note : This don't display the User name.<br>
+        To display User Name replace this ': ' to this '- ' in line 38 of the code.
+        <br><br>
+        <b>Example</b><br>
+        01/01/2022, 12:00 am - User_Name: Happy New year<br>
+        <b>With User Name</b><br>
+        User_Name: Happy New year<br>
+        <b>Without User Name</b><br>
+        Happy New year<br>
+
+    </p>
+    <br>
+    <input type="file" id="fileInput" accept=".txt">
+    <div id="chat-messages"></div>
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const data = e.target.result;
+            const lines = data.split('\n');
+            const chatMessages = document.getElementById('chat-messages');
+            chatMessages.innerHTML = ''; // Clear previous messages
+
+            lines.forEach(line => {
+                const message = line.split(': ')[1];  // Replace to see User name.
+                const p = document.createElement('span');
+                p.textContent = message;
+                chatMessages.appendChild(p);
+
+                // Add a line break after each message
+                chatMessages.appendChild(document.createElement('br'));
+            });
+        };
+        reader.readAsText(file);
+    }
+});
+
+    </script>
+</body>
+</html>
